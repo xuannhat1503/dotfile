@@ -1,0 +1,65 @@
+format = """
+$os\
+$username\
+$directory\
+$git_branch\
+$git_status\
+$nodejs\
+$python\
+$rust\
+$golang\
+$docker_context\
+$line_break\
+$character
+"""
+
+[os]
+disabled = false
+format = "[$symbol ](bold blue)"
+
+[os.symbols]
+Linux = "󰌽"
+Ubuntu = "󰕈"
+Arch = "󰣇"
+Fedora = "󰣛"
+
+[username]
+show_always = true
+style_user = "bold green"
+format = "[$user](bold green) "
+
+[directory]
+style = "bold cyan"
+truncation_length = 3
+format = "[ $path]($style) "
+
+[git_branch]
+symbol = " "
+style = "bold purple"
+
+[git_status]
+ahead = "⇡${count}"
+behind = "⇣${count}"
+modified = "!"
+deleted = "✘"
+staged = "+"
+untracked = "?"
+
+[nodejs]
+symbol = " "
+
+[python]
+symbol = " "
+
+[rust]
+symbol = " "
+
+[golang]
+symbol = " "
+
+[docker_context]
+symbol = " "
+
+[character]
+success_symbol = "[❯](bold green)"
+error_symbol = "[❯](bold red)"
